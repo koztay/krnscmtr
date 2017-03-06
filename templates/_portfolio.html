@@ -1,0 +1,78 @@
+{% load staticfiles %}
+{% load at_size from images %}
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <div class="container">
+
+        <h1 class="text-center">
+            <strong>KARNAS</strong> Teknoloji Grup
+            <span class="subtitle">CCTV | VIDEOWALL | DIGITAL-SIGNAGE | VIDEO KONFERANS</span>
+        </h1>
+
+        <div class="divider"><!-- divider -->
+            <i class="fa fa-star"></i>
+        </div>
+        <h1>
+        Referanslarımızdan Bazıları
+        </h1>
+
+        <p>{{ short_intro.intro_text | safe }}</p>
+
+        <ul class="nav nav-pills isotope-filter isotope-filter" data-sort-id="isotope-list" data-option-key="filter">
+            <li data-option-value="*" class="active"><a href="#">Tümü</a></li>
+            <li data-option-value=".videowall"><a href="#">Videowall</a></li>
+            <li data-option-value=".cctv"><a href="#">CCTV</a></li>
+            <li data-option-value=".digital-signage"><a href="#">Digital-Signage</a></li>
+            <li data-option-value=".global"><a href="#">Diğer</a></li>
+        </ul>
+
+        <div class="row">
+
+            <ul class="sort-destination isotope" data-sort-id="isotope-list">
+
+                {% for project in projects %}
+
+                    <li class="isotope-item col-sm-6 col-md-3 {{ project.type }}"><!-- item -->
+                        <div class="item-box">
+                            <figure>
+                                {% if not project.video_url %}
+                                <a class="item-hover" href="{{ project.get_absolute_url }}">
+                                    <span class="overlay color2"></span>
+                                    <span class="inner">
+                                        <span class="block fa fa-plus fsize20"></span>
+                                            <strong>PROJE</strong> DETAYI
+                                    </span>
+                                </a>
+                                {% else %}
+                                <a class="item-hover lightbox" href="{{ project.video_url }}" data-plugin-options='{"type":"iframe"}'>
+                                <span class="overlay color2"></span>
+                                <span class="inner">
+                                    <span class="block fa fa-plus fsize20"></span>
+                                    <strong>PROJE</strong> VİDEOSU
+                                </span>
+                                </a>
+                                {% endif %}
+                                {% if project.images.all.count > 0 %}
+                                    <img class="img-responsive" src="{{ project.images.first|at_size:"small" }}" alt="">
+                                {% else %}
+                                    <img class="img-responsive" src="" width="260" height="260" alt="">
+                                {% endif %}
+
+                            </figure>
+                            <div class="item-box-desc">
+                                <h4>{{ project.title }}</h4>
+                                <small class="styleColor">{{ project.finished_date }}</small>
+                            </div>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div><!-- /.masonry-container -->
+
+    </div>
+</section>
+<!-- /PORTFOLIO -->

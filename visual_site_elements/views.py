@@ -1,0 +1,15 @@
+from django.views.generic.base import TemplateView
+from portfolio.models import Project, PortfolioShortIntro
+
+
+class HomePageView(TemplateView):
+
+    template_name = "pages/home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        context['projects'] = Project.objects.all()
+        context['short_intro'] = PortfolioShortIntro.objects.first()
+        print(context['short_intro'])
+
+        return context

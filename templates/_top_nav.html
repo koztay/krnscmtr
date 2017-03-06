@@ -1,0 +1,86 @@
+{% load static %}
+<!-- TOP NAV -->
+<header id="topNav" class="topHead"><!-- remove class="topHead" if no topHead used! -->
+    <div class="container">
+
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Logo text or image -->
+        <a class="logo" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" alt="KARNAS Teknoloji Grup" />
+        </a>
+
+        <!-- Top Nav -->
+        <div class="navbar-collapse nav-main-collapse collapse pull-right">
+            <nav class="nav-main mega-menu">
+                <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">
+                            Ürünlerimiz <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu"><a href="#">Profesyonel Monitörler</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Videowall Monitörleri</a></li>
+                                    <li><a href="#">Güneşe Dayanıklı Monitörler</a></li>
+                                    <li><a href="#">Digital-Signage Monitörleri</a></li>
+                                    <li><a href="#">Dokunmatik Monitörler</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu"><a href="#">CCTV: Kamera Güvenlik Sistemleri</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Network/IP Kameralar</a></li>
+                                    <li><a href="#">Network Kayıt Cihazları</a></li>
+                                    <li><a href="#">IP Kamera Kayıt Yazılımları</a></li>
+                                    <li><a href="#">Analog Kameralar</a></li>
+                                    <li><a href="#">Dijital Kayıt Cihazları</a></li>
+                                    <li><a href="#">Kontrol Klavyeleri</a></li>
+                                    <li><a href="#">Güvenlik Monitörleri</a></li>
+                                    <li><a href="#">Network Kamera Aksesuarları</a></li>
+                                    <li><a href="#">Kablosuz Network Ürünleri</a></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Video Konferans Sistemleri</a></li>
+                            <li><a href="#">Elektronik Kilit</a></li>
+                            <li><a href="#">Geçiş Kontrol Sistemleri</a></li>
+                            <li><a href="#">Projeksiyon Cihazları ve Aksesuarları</a></li>
+                            <li><a href="#">Akıllı Tahtalar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">
+                            Sistem Çözümleri <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Videowall Kontrol Cihazı Çözümleri</a></li>
+                            <li><a href="#">Digital Signage Yazılımı Çözümleri</a></li>
+                            <li><a href="#">Kameralı Güvenlik Yazılımı Çözümleri</a></li>
+                        </ul>
+                    </li>
+                    <!-- GLOBAL SEARCH -->
+                    <li class="search">
+                        <!-- search form -->
+                        <form method="get" action="#" class="input-group pull-right">
+                            <input type="text" class="form-control" name="k" id="k" value="" placeholder="Sitede Ara...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary notransition"><i class="fa fa-search"></i></button>
+                            </span>
+                        </form>
+                        <!-- /search form -->
+                    </li>
+                    <!-- /GLOBAL SEARCH -->
+
+                </ul>
+            </nav>
+        </div>
+        <!-- /Top Nav -->
+
+    </div>
+</header>
+
+<span id="header_shadow"></span>
+<!-- /TOP NAV -->
