@@ -1,5 +1,5 @@
 [run]
-include = karnas_cookiecutter/*
+include = karnascookiecutter/*
 omit = *migrations*, *tests*
 plugins =
     django_coverage_plugin

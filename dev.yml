@@ -11,7 +11,7 @@ services:
       - postgres_data_dev:/var/lib/postgresql/data
       - postgres_backup_dev:/backups
     environment:
-      - POSTGRES_USER=karnas_cookiecutter
+      - POSTGRES_USER=karnascookiecutter
 
   django:
     build:
@@ -21,7 +21,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - POSTGRES_USER=karnas_cookiecutter
+      - POSTGRES_USER=karnascookiecutter
       - USE_DOCKER=yes
       - DJANGO_ALLOWED_HOSTS=192.168.99.102
     volumes:
@@ -40,7 +40,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - POSTGRES_USER=karnas_cookiecutter
+      - POSTGRES_USER=karnascookiecutter
     volumes:
       - .:/app
     links:

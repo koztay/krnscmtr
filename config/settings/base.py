@@ -12,8 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3  # (karnas_cookiecutter/config/settings/base.py - 3 = karnas_cookiecutter/)
-APPS_DIR = ROOT_DIR.path('karnas_cookiecutter')
+ROOT_DIR = environ.Path(__file__) - 3  # (karnascookiecutter/config/settings/base.py - 3 = karnascookiecutter/)
+APPS_DIR = ROOT_DIR.path('karnascookiecutter')
 
 # Load operating system environment variables and then prepare to use them
 env = environ.Env()
@@ -60,7 +60,7 @@ THIRD_PARTY_APPS = [
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    'karnas_cookiecutter.users.apps.UsersConfig',
+    'karnascookiecutter.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'visual_site_elements',
     'portfolio',
@@ -84,7 +84,7 @@ MIDDLEWARE = [
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'karnas_cookiecutter.contrib.sites.migrations'
+    'sites': 'karnascookiecutter.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -117,7 +117,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///karnas_cookiecutter'),
+    'default': env.db('DATABASE_URL', default='postgres:///karnascookiecutter'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -253,8 +253,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-ACCOUNT_ADAPTER = 'karnas_cookiecutter.users.adapters.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'karnas_cookiecutter.users.adapters.SocialAccountAdapter'
+ACCOUNT_ADAPTER = 'karnascookiecutter.users.adapters.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'karnascookiecutter.users.adapters.SocialAccountAdapter'
 
 # Custom user app defaults
 # Select the correct user model

@@ -45,9 +45,9 @@ htmlcov
 # Provided default Pycharm Run/Debug Configurations should be tracked by git
 # In case of local modifications made by Pycharm, use update-index command
 # for each changed file, like this:
-# git update-index --assume-unchanged .idea/karnas_cookiecutter.iml
+# git update-index --assume-unchanged .idea/karnascookiecutter.iml
 !.idea/runConfigurations/
-!.idea/karnas_cookiecutter.iml
+!.idea/karnascookiecutter.iml
 !.idea/vcs.xml
 !.idea/webResources.xml
 
@@ -68,7 +68,7 @@ node_modules/
 .env
 
 # User-uploaded media
-karnas_cookiecutter/media/
+karnascookiecutter/media/
 
 staticfiles/
 

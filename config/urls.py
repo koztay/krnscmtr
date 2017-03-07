@@ -20,7 +20,7 @@ urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
 
     # User management
-    url(r'^users/', include('karnas_cookiecutter.users.urls', namespace='users')),
+    url(r'^users/', include('karnascookiecutter.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here

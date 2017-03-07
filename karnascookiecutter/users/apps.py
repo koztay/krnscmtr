@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class UsersConfig(AppConfig):
-    name = 'karnas_cookiecutter.users'
+    name = 'karnascookiecutter.users'
     verbose_name = "Users"
 
     def ready(self):

@@ -167,7 +167,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'karnas_cookiecutterdoc'
+htmlhelp_basename = 'karnascookiecutterdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -187,7 +187,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index',
-     'karnas_cookiecutter.tex',
+     'karnascookiecutter.tex',
      'karnas-cookiecutter Documentation',
      """Kemal ÖZTAY""", 'manual'),
 ]
@@ -218,7 +218,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'karnas_cookiecutter', 'karnas-cookiecutter Documentation',
+    ('index', 'karnascookiecutter', 'karnas-cookiecutter Documentation',
      ["""Kemal ÖZTAY"""], 1)
 ]
 
@@ -232,7 +232,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'karnas_cookiecutter', 'karnas-cookiecutter Documentation',
+    ('index', 'karnascookiecutter', 'karnas-cookiecutter Documentation',
      """Kemal ÖZTAY""", 'karnas-cookiecutter',
      """karnas.com.tr web sitesi""", 'Miscellaneous'),
 ]
