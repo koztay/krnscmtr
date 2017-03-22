@@ -3,14 +3,16 @@
 {% load at_size from images %}
 
 {% block content %}
+<br>
+<br>
      <!-- PAGE TITLE -->
         <header id="page-title">
             <div class="container">
-                <h1><strong>Hakkımızda</strong></h1>
+                <h1><strong>{{ flatpage.title }}</strong></h1>
 
                 <ul class="breadcrumb">
                     <li><a href="{% url 'home' %}">Anasayfa</a></li>
-                    <li class="active">Hakkımızda</li>
+                    <li class="active">{{ flatpage.title }}</li>
                 </ul>
             </div>
         </header>
@@ -19,9 +21,9 @@
 
             <!-- WELCOME -->
             <article>
-                <h2>Welcome to Atropos</h2>
-                <p>Sed ut perspiciatis unde omnis <strong>iste natus error</strong> sit voluptatem accusantium <em>doloremque laudantium</em>, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia <a href="#">voluptas sit aspernatur</a> aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut <strong>labore dolore magnm</strong> aliquam quaerat voluptatem.</p>
-                <p class="lead">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+             {% autoescape off %}
+                {{ flatpage.content }}
+             {% endautoescape %}
             </article>
             <!-- WELCOME -->
 
@@ -34,13 +36,13 @@
                 <div class="col-md-6">
                     <div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
                         <div>
-                            <img class="img-responsive" src="assets/images/demo/about_1.jpg" width="555" height="311" alt="">
+                            <img class="img-responsive" src="{% static 'images/demo/about_1.jpg' %}" width="555" height="311" alt="">
                         </div>
                         <div>
                             <iframe src="http://player.vimeo.com/video/23630702" width="800" height="450"></iframe>
                         </div>
                         <div>
-                            <img class="img-responsive" src="assets/images/demo/about_2.jpg" width="555" height="311" alt="">
+                            <img class="img-responsive" src="{% static 'images/demo/about_2.jpg' %}" width="555" height="311" alt="">
                         </div>
                     </div>
                 </div>

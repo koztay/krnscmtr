@@ -21,15 +21,10 @@
         <!-- WEB FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
 
-
-        {% compress css %}
         {% include '_head_css.html' %}
-        {% endcompress %}
 
-        {% compress js %}
         <!-- Modernizr -->
         <script type="text/javascript" src="{% static 'plugins/modernizr.min.js' %}"></script>
-        {% endcompress %}
 
         <style>
             {% block style %}{% endblock %}
@@ -78,10 +73,7 @@
 
         {% include '_footer.html' %}
 
-
-        {% compress js %}
         {% include '_javascript.html' %}
-        {% endcompress %}
 
         {% block javascript %} {% endblock javascript %}
 
