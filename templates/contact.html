@@ -1,0 +1,96 @@
+{% extends '__base.html' %}
+{% load crispy_forms_tags %}
+
+{% block messages %}
+    {% include '_messages.html' %}
+{% endblock %}
+
+{#{% block generic_page_header %}#}
+{#    {% include 'products/_head_banner.html' %}#}
+{#{% endblock %}#}
+
+{% block content %}
+<!-- WRAPPER -->
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <header id="page-title" class="nopadding">
+        <div id="gmap"><!-- google map --></div>
+        <script type="text/javascript">
+            var	$googlemap_latitude 	= 41.067391694935985,
+                $googlemap_longitude	= 28.993120527786232,
+                $googlemap_zoom			= 17;
+        </script>
+    </header>
+
+    <section id="contact" class="container">
+				<div class="row">
+
+					<!-- FORM -->
+					<div class="col-md-8">
+
+						<h2>Drop us a line or just say <strong><em>Hello!</em></strong></h2>
+
+						<form class="white-row" action="" method="post">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <input type="submit" value="Gönder" class="btn btn-primary btn-lg"
+                               data-loading-text="Gönderiliyor...">
+
+						</form>
+
+					</div>
+					<!-- /FORM -->
+
+
+					<!-- INFO -->
+					<div class="col-md-4">
+
+						<h2>Visit Us</h2>
+
+						<p>
+							Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.
+						</p>
+
+						<div class="divider half-margins"><!-- divider -->
+							<i class="fa fa-star"></i>
+						</div>
+
+						<p>
+							<span class="block"><strong><i class="fa fa-map-marker"></i> Adres : </strong>
+                                Yeni yanyol sok.Celil Ağa İş Merkezi
+                                No:9/3 Mecidiyeköy
+                                Şişli / İstanbul</span>
+							<span class="block"><strong><i class="fa fa-phone"></i> Tel : </strong>+90 (212) 217 1306</span>
+							<span class="block"><strong><i class="fa fa-envelope"></i> Eposta : </strong>
+                                <a href="mailto:mail@yourdomain.com">info@karnas.com.tr</a></span>
+						</p>
+
+						<div class="divider half-margins"><!-- divider -->
+							<i class="fa fa-star"></i>
+						</div>
+
+						<h4 class="font300">Çalışma Saatlerimiz</h4>
+						<p>
+							<span class="block"><strong>Pazartesi - Cuma:</strong> 09:00 - 18:00</span>
+							<span class="block"><strong>Cumartesi:</strong> 09:00 - 14:00</span>
+							<span class="block"><strong>Pazar:</strong> Kapalı</span>
+						</p>
+
+					</div>
+					<!-- /INFO -->
+
+				</div>
+
+			</section>
+
+</div>
+{% endblock %}
+
+{#{% block subscribe_section %}#}
+{#    {% include '_subscribe_section.html' %}#}
+{#{% endblock %}#}
+
+{% block javascript_section %}
+    {% include '_javascripts/_javascript_common_pages.html' %}
+{% endblock %}

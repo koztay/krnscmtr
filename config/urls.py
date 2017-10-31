@@ -9,11 +9,15 @@ from django.contrib.flatpages import views
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+
+from newsletter.views import ContactView
 from visual_site_elements.views import HomePageView
+
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='home'),
-    url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^contact/$', ContactView.as_view(), name='contact'),
+    # url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
 
     # Django Admin, use {% url 'admin:index' %}

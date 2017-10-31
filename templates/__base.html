@@ -47,7 +47,7 @@
 				<!-- LINKS -->
 				<div class="pull-right nav hidden-xs">
                     <a href='{% url "hakkimizda" %}'><i class="fa fa-angle-right"></i> Hakkımızda</a>
-					<a href="contact-us.html"><i class="fa fa-angle-right"></i> Bize Ulaşın</a>
+					<a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i> Bize Ulaşın</a>
 				</div>
 				<!-- /LINKS -->
 
@@ -59,6 +59,8 @@
 
 		<!-- WRAPPER -->
 		<div id="wrapper">
+
+        {% block messages %} {% endblock %}
 
         {% block slider %} {% endblock slider %}
 

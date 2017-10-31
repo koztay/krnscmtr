@@ -62,8 +62,10 @@ LOCAL_APPS = [
     # custom users app
     'karnascookiecutter.users.apps.UsersConfig',
     # Your stuff: custom apps go here
-    'visual_site_elements',
+    'newsletter',
     'portfolio',
+    'visual_site_elements',
+
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

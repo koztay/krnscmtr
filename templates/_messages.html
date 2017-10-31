@@ -1,0 +1,19 @@
+<!-- Messages Section-->
+{% if messages %}
+
+    <div class="white-row">
+        <div class="row">
+            <div class="col-md-12">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} fade in">  <!-- singular -->
+                            <h4><i class="fa fa-trophy"></i>Teşekkürler!</h4>
+                            <a class="close" data-dismiss="alert">×</a>
+                            {{ message|safe }}
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+<!-- / Messages section -->

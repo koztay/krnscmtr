@@ -1,0 +1,70 @@
+{% extends '__base.html' %}
+
+{% block content %}
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- PAGE TITLE -->
+			<header id="page-title"> <!-- style="background-image:url('../assets/images/demo/parallax_bg.jpg')" -->
+				<!--
+					Enable only if bright background image used
+					<span class="overlay"></span>
+				-->
+
+				<div class="container">
+					<h1>Sayfa Bulunamadı!</h1>
+
+					<ul class="breadcrumb">
+						<li><a href="{% url 'home' %}">Anasayfa</a></li>
+						<li class="active">Sayfa bulunamadı</li>
+					</ul>
+				</div>
+			</header>
+
+			<section class="container">
+
+				<div class="row">
+
+					<div class="col-md-9">
+						<h2>
+							<strong>Maalesef</strong>, Aradığınız sayda bulunamadı!
+							<span class="subtitle">We're sorry, but the page you were looking for doesn't exist.</span>
+						</h2>
+
+						<div class="e404">404</div>
+					</div>
+
+					<aside class="col-md-3">
+
+						<h3>SİTEDE ARA!</h3>
+						<div class="row">
+							<div class="col-md-12">
+								<form method="get" action="#" class="input-group">
+									<input type="text" class="form-control" name="s" id="s" value="" placeholder="search..." />
+									<span class="input-group-btn">
+										<button class="btn btn-primary"><i class="fa fa-search"></i></button>
+									</span>
+								</form>
+							</div>
+						</div>
+
+						<h4>FAYDALI LİNKLER</h4>
+						<ul class="nav nav-list">
+							<li><a href="{% url 'home' %}"><i class="fa fa-circle-o"></i> Anasayfa</a></li>
+							<li><a href="{% url 'about' %}"><i class="fa fa-circle-o"></i> Hakkımızda</a></li>
+							<li><a href="{% url 'contact' %}"><i class="fa fa-circle-o"></i> İletişim</a></li>
+						</ul>
+
+
+
+					</aside>
+
+				</div>
+
+
+			</section>
+
+		</div>
+		<!-- /WRAPPER -->
+
+{% endblock %}
