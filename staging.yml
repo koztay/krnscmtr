@@ -13,7 +13,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - postgres_backup:/backups
-    env_file: .env
+    env_file: .env_staging
 
   django:
     restart: always
@@ -29,7 +29,7 @@ services:
     volumes:
       - static-data:/static_root
     command: /gunicorn.sh
-    env_file: .env
+    env_file: .env_staging
 
   nginx:
     restart: always
