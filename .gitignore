@@ -76,3 +76,5 @@ staticfiles/
 #core-os / cloud config
 cloud-config.yml
 create_coreos_droplet.sh
+
+compose/nginx/certs/

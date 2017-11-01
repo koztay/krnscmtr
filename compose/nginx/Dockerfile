@@ -7,8 +7,8 @@ COPY configs/nginx.conf /etc/nginx/nginx.conf
 COPY configs/default.conf /etc/nginx/conf.d/default.conf
 COPY configs/default.conf /etc/nginx/conf.d/timeout.conf
 
-COPY certs/istebu_com_bundle.crt /etc/ssl/certs/istebu_com_bundle.crt
-COPY certs/istebu.key /etc/ssl/private/istebu.key
+COPY certs/ssl-bundle.crt /etc/ssl/certs/ssl-bundle.crt
+COPY certs/karnas.key /etc/ssl/private/karnas.key
 COPY certs/dhparam.pem /etc/ssl/private/dhparam.pem
 
 COPY docker-entrypoint /
