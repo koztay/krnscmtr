@@ -33,27 +33,7 @@
     </head>
 	<body><!-- Available classes for body: boxed , pattern1...pattern10 . Background Image - example add: data-background="images/boxed_background/1.jpg"  -->
 
-		<!-- Top Bar -->
-		<header id="topHead">
-			<div class="container">
-
-				<!-- PHONE/EMAIL -->
-				<span class="quick-contact pull-left">
-					<i class="fa fa-phone"></i> +90 (212) 217 1306 &bull;
-					<a class="hidden-xs" href="mailto:info@karnas.com.tr">info@karnas.com.tr</a>
-				</span>
-				<!-- /PHONE/EMAIL -->
-
-				<!-- LINKS -->
-				<div class="pull-right nav hidden-xs">
-                    <a href='{% url "hakkimizda" %}'><i class="fa fa-angle-right"></i> Hakkımızda</a>
-					<a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i> Bize Ulaşın</a>
-				</div>
-				<!-- /LINKS -->
-
-			</div>
-		</header>
-		<!-- /Top Bar -->
+        {% include '_header.html' %}
 
         {% include '_top_nav.html' with object_list=menu_items %}
 

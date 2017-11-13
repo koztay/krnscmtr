@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load at_size from images %}
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
@@ -54,7 +53,7 @@
                                 </a>
                                 {% endif %}
                                 {% if project.images.all.count > 0 %}
-                                    <img class="img-responsive" src="{{ project.images.first|at_size:"small" }}" alt="">
+                                    <img class="img-responsive" src="{{ project.images.first}}" alt="">
                                 {% else %}
                                     <img class="img-responsive" src="" width="260" height="260" alt="">
                                 {% endif %}

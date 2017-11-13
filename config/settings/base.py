@@ -53,7 +53,7 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-    'django_images',  # django-images plug-in
+    # 'django_images',  # django-images plug-in
     'ckeditor',  # django-ckeditor
 ]
 

@@ -1,6 +1,5 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django_images.models import Image
 
 # Create your models here.
 
@@ -30,7 +29,7 @@ class Project(models.Model):
         ordering = ("-finished_date", "title")
 
 
-class ProjectImage(Image):
+class ProjectImage(models.Model):
     project = models.ForeignKey(Project, related_name='images')
 
 

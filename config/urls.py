@@ -28,7 +28,6 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
-    url(r'^images/', include('django_images.urls')),
     url(r'^projects/', include('portfolio.urls', namespace='projects')),
     # url(r'^pages/', include('django.contrib.flatpages.urls')),  # for flatpages urls
     url(r'^pages/hakkimizda/$', views.flatpage, {'url': '/hakkimizda/'}, name='hakkimizda'),

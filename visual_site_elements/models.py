@@ -1,5 +1,4 @@
 from django.db import models
-from django_images.models import Image
 
 
 class Brand(models.Model):
@@ -9,5 +8,5 @@ class Brand(models.Model):
         return str(self.title)
 
 
-class BrandImage(Image):
+class BrandImage(models.Model):
     brand = models.ForeignKey(Brand, related_name='images')
