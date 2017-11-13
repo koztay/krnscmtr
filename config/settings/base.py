@@ -55,6 +55,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',  # registration
     # 'django_images',  # django-images plug-in
     'ckeditor',  # django-ckeditor
+    'sorl.thumbnail',
 ]
 
 # Apps specific for this project go here.

@@ -1,4 +1,8 @@
-{% load staticfiles %}
+{% load staticfiles thumbnail %}
+
+{#{% thumbnail "http://www.aino.se/media/i/logo.png" "40x40" crop="80% top" as im %}#}
+{#    <img src="{{ im.url }}">#}
+{#{% endthumbnail %}#}
 
 <!-- REVOLUTION SLIDER -->
 <div class="fullwidthbanner-container roundedcorners">
@@ -43,7 +47,9 @@
                     data-speed="600"
                     data-start="1100"
                     data-easing="easeOutExpo">
-                    <img src="{% static 'images/demo/portfolio/slider/1.jpg' %}" width="140" height="140" alt="Image 2">
+{#                    {% thumbnail "{% static 'images/home_slider_images/random_images/rand-1.jpg' %}" "140x140" crop="center" as im %}#}
+{#                    <img src="{{ im.url }}">#}
+{#                    {% endthumbnail %}#}
                 </div>
 
                 <div class="tp-caption randomrotate"
