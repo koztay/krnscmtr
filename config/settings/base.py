@@ -278,24 +278,3 @@ ADMIN_URL = r'^admin/'
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
 
-IMAGE_SIZES = {
-
-    'normal': {
-        'size': (650, 435),
-        'quality': 85,
-        'crop': True
-    },
-    'small': {
-        'size': (260, 170),
-        'crop': True
-    },
-    'tiny_square': {
-        'size': (140, 140),
-        'crop': True
-    },
-    'brand_image': {
-        'size': (140, 140),  # bunun size 'ı doğru mu kontrol et.
-        'crop': True  # bu crop edilecek mi kontrol et.
-    },
-
-}

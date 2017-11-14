@@ -6,7 +6,7 @@ from django.db import models
 
 from ckeditor.widgets import CKEditorWidget
 
-from .models import BrandImage
+from .models import BrandImage, SliderImageThumb, SliderImage
 
 
 # FlatPages CKEditor integration
@@ -19,4 +19,6 @@ class FlatPageCustom(FlatPageAdmin):
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageCustom)
 admin.site.register(BrandImage)
+admin.site.register(SliderImage)
+admin.site.register(SliderImageThumb)
 

@@ -47,9 +47,9 @@
                     data-speed="600"
                     data-start="1100"
                     data-easing="easeOutExpo">
-{#                    {% thumbnail "{% static 'images/home_slider_images/random_images/rand-1.jpg' %}" "140x140" crop="center" as im %}#}
-{#                    <img src="{{ im.url }}">#}
-{#                    {% endthumbnail %}#}
+                    {% thumbnail slider_thumbs.0.image "140x140" crop="center" as im %}
+                    <img src="{{ im.url }}">
+                    {% endthumbnail %}
                 </div>
 
                 <div class="tp-caption randomrotate"
@@ -148,7 +148,9 @@
                     data-speed="300"
                     data-start="2200"
                     data-easing="easeOutExpo">
-                    <img src="{% static 'images/demo/portfolio/slider/2.jpg' %}" width="140" height="140" alt="Image 13">
+                    {% thumbnail thumbs.0.image "140x140" crop="center" as im %}
+                    <img src="{{ im.url }}">
+                    {% endthumbnail %}
                 </div>
             </li>
 
@@ -250,3 +252,15 @@
     </div>
 </div>
 <!-- /REVOLUTION SLIDER -->
+<h4>{{ thumbs }}</h4>
+<h4>{{ thumbs.0 }}</h4>
+<h4>{{ thumbs.0.image }}</h4>
+{% thumbnail "https://cdn.yemeksepeti.com/adm/Web-3mvxmc.png" "140x140" crop="center" as im %}
+<img src="{{ im.url }}">
+<h4>im.url : {{ im.url }}</h4>
+<h4>im : {{ im }}</h4>
+{% endthumbnail %}
+
+{% thumbnail "https://cdn.yemeksepeti.com/adm/Web-3mvxmc.png" "40x40" crop="80% top" as im %}
+    <img src="{{ im.url }}">
+{% endthumbnail %}
