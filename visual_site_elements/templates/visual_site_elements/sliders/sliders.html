@@ -5,6 +5,7 @@
 {#{% endthumbnail %}#}
 
 <!-- REVOLUTION SLIDER -->
+
 <div class="fullwidthbanner-container roundedcorners">
 
     <div class="fullwidthbanner">
@@ -13,7 +14,7 @@
             <!-- SLIDE  -->
             <li data-transition="boxslide" data-slotamount="5"
                 data-link="#" data-slideindex="back">
-
+                <div class="tp-dottedoverlay twoxtwo" style="z-index:99;"></div>
                 <!-- COVER IMAGE -->
 {#                <img src="{% static 'images/demo/revolution_slider/5378467111_e8b9e98f8f_o.jpg' %}"#}
 {#                     alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />#}
@@ -156,8 +157,8 @@
 
             <!-- SLIDE  -->
             <li data-transition="3dcurtain-vertical" data-slotamount="14"
-                data-masterspeed="300" data-delay="15000">
-
+                data-masterspeed="300" data-delay="15000" style="z-index: 199">
+                <div class="tp-dottedoverlay twoxtwo" style="z-index:99;"></div>
                 <!-- COVER IMAGE -->
                 <img src="{% static 'images/home_slider_images/video-bg-2.jpg' %}"
                      alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
@@ -167,7 +168,7 @@
                     data-y="70"
                     data-speed="900"
                     data-start="500"
-                    data-easing="easeOutBack">
+                    data-easing="easeOutBack" style="z-index:199;">
                     <iframe src='https://www.youtube.com/embed/4zSStF-UpiA' width='640' height='360'
                             style='width:640px; height:360px;'>
                     </iframe>
@@ -251,16 +252,5 @@
         <div class="tp-bannertimer"></div>
     </div>
 </div>
-<!-- /REVOLUTION SLIDER -->
-<h4>{{ thumbs }}</h4>
-<h4>{{ thumbs.0 }}</h4>
-<h4>{{ thumbs.0.image }}</h4>
-{% thumbnail "https://cdn.yemeksepeti.com/adm/Web-3mvxmc.png" "140x140" crop="center" as im %}
-<img src="{{ im.url }}">
-<h4>im.url : {{ im.url }}</h4>
-<h4>im : {{ im }}</h4>
-{% endthumbnail %}
 
-{% thumbnail "https://cdn.yemeksepeti.com/adm/Web-3mvxmc.png" "40x40" crop="80% top" as im %}
-    <img src="{{ im.url }}">
-{% endthumbnail %}
+<!-- /REVOLUTION SLIDER -->

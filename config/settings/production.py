@@ -202,3 +202,6 @@ ADMIN_URL = env('DJANGO_ADMIN_URL')
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+# sorl.thumbnail AWS S3 issue
+THUMBNAIL_FORCE_OVERWRITE = True
