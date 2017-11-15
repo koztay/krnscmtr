@@ -93,10 +93,10 @@ print(AWS_STORAGE_BUCKET_NAME)
 
 # Static Assets
 # ------------------------
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # BUNU Volume için yazmak zorundayız.
-STATIC_ROOT = "/static_root"
+# STATIC_ROOT = "/static_root"
 # COMPRESSOR
 # ------------------------------------------------------------------------------
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
@@ -210,8 +210,8 @@ THUMBNAIL_FORCE_OVERWRITE = True
 
 # AWS upload etmiyordu bakalım şimdi ne olacak, aşağıdaki linkteki yöntemi uyguladım.
 # https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
-# STATICFILES_LOCATION = 'static'
+STATICFILES_LOCATION = 'static'
 # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
