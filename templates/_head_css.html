@@ -1,8 +1,9 @@
-{% load staticfiles%}
+{% load staticfiles compress %}
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" type="text/css" />
 
+{% compress css %}
 <!-- CORE CSS -->
 <link href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
-<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'plugins/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'plugins/owl-carousel/owl.theme.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'plugins/owl-carousel/owl.transitions.css' %}" rel="stylesheet" type="text/css" />
@@ -19,3 +20,4 @@
 <link href="{% static 'css/layout-responsive.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'css/color_scheme/orange.css' %}" rel="stylesheet" type="text/css" /><!-- orange: default style -->
 
+{% endcompress %}

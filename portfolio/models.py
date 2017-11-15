@@ -31,11 +31,12 @@ class Project(models.Model):
 
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, related_name='images')
+    image = models.ImageField(upload_to="images/portfolio_images")
 
 
 class PortfolioShortIntro(models.Model):
     intro_text = models.TextField()
 
     def __str__(self):
-        return 'Intro Text'
+        return self.intro_text
 

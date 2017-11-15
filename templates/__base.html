@@ -24,7 +24,9 @@
         {% include '_head_css.html' %}
 
         <!-- Modernizr -->
+        {% compress js %}
         <script type="text/javascript" src="{% static 'plugins/modernizr.min.js' %}"></script>
+        {% endcompress %}
 
         <style>
             {% block style %}{% endblock %}

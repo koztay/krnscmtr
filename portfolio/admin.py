@@ -24,6 +24,8 @@ class PortfolioShortIntroAdmin(admin.ModelAdmin):
         models.TextField: {'widget': CKEditorWidget}
     }
 
+
 admin.site.register(Project, ProjectAdmin)
+admin.site.register(ProjectImage)
 admin.site.register(PortfolioShortIntro, PortfolioShortIntroAdmin)
 

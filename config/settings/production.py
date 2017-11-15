@@ -89,12 +89,14 @@ AWS_HEADERS = {
 # URL that handles the media served from MEDIA_ROOT, used for managing
 # stored files.
 MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-
+print(AWS_STORAGE_BUCKET_NAME)
 
 # Static Assets
 # ------------------------
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# BUNU Volume için yazmak zorundayız.
+STATIC_ROOT = "/static_root"
 # COMPRESSOR
 # ------------------------------------------------------------------------------
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
@@ -205,3 +207,11 @@ ADMIN_URL = env('DJANGO_ADMIN_URL')
 
 # sorl.thumbnail AWS S3 issue
 THUMBNAIL_FORCE_OVERWRITE = True
+
+# AWS upload etmiyordu bakalım şimdi ne olacak, aşağıdaki linkteki yöntemi uyguladım.
+# https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
+# STATICFILES_LOCATION = 'static'
+# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
