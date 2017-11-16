@@ -10,14 +10,13 @@
     {% include 'visual_site_elements/sliders/sliders.html' with object_list=sliders thumbs=slider_thumbs %}
 {% endblock slider %}
 
-{% block content %}
-
-{% endblock content %}
-
-
 {% block portfolio %}
     {% include '_portfolio.html' with object_list=projects %}
 {% endblock portfolio %}
+
+{% block content %}
+{{ projects }}
+{% endblock content %}
 
 {% block awesome_work %}
     {% include '_awesome_work.html' with object_list=awesome_content %}

@@ -3,6 +3,291 @@
 
 {% block content %}
 
-    {{ project }}
+    <div id="wrapper">
+
+			<!-- PAGE TITLE -->
+			<header id="page-title">
+
+				<div class="container">
+					<h1>{{ project.title }} Projesi</h1>
+
+					<ul class="breadcrumb">
+						<li><a href="{% url 'home' %}">Anasayfa</a></li>
+{#						<li><a href="#">Portfolio</a></li>#}
+						<li class="active">{{ project.title }}</li>
+					</ul>
+				</div>
+			</header>
+
+			<section id="portfolio" class="container">
+
+				<h2><strong>{{ project.title }}</strong> Proje Detayları</h2>
+
+				<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
+                    {% if project.video_url %}
+                    <div>
+						<iframe width="555" height="311" src="{{ project.video_url }}"></iframe>
+					</div>
+                    {% endif %}
+                    {% load thumbnail %}
+                    {% for image in project.images.all %}
+                    <div>
+                        {% thumbnail image.image "1140x760" crop="center" as im %}
+						<img class="img-responsive" src="{{ im.url }}" alt="">
+                        {% endthumbnail %}
+					</div>
+                    {% endfor %}
+
+				</div>
+
+				<div class="divider"><!-- divider -->
+					<i class="fa fa-star"></i>
+				</div>
+
+				<small class="font300 fsize13 block project_quick_info">
+					<i class="fa fa-calendar styleSecondColor"></i> {{ project.finished_date }}
+					<span>&bull;</span>
+					{{ project.title }}
+				</small>
+				<p class="lead">
+					{{ project.description }}
+				</p>
+
+
+{#				<div class="text-center">#}
+{#					<a href="#" class="btn btn-primary btn-lg btn-margin-top"><i class="fa fa-external-link"></i> Live Preview</a>#}
+{#				</div>#}
+
+
+				<hr />
+                {% comment %}
+				<!-- RELATED -->
+				<h2><strong>Related</strong> Projects</h2>
+				<div class="row">
+
+					<div class="col-md-3"><!-- item 1 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover" href="portfolio-single.html">
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/scouter-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Project</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 2 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover lightbox" href="http://player.vimeo.com/video/25076865" data-plugin-options='{"type":"iframe"}'>
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>VIEW</strong> VIDEO
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/black-kitty-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Video</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 3 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover lightbox" href="assets/images/demo/portfolio/merchant2-600x403.jpg" data-plugin-options='{"type":"image"}'>
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/merchant2-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Image</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 4 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover" href="portfolio-single.html">
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/flippin-the-bird1-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Project</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /RELATED -->
+                {% endcomment %}
+
+			</section>
+
+		</div>
 
 {% endblock %}
+
+
+
+<div id="wrapper">
+
+			<!-- PAGE TITLE -->
+			<header id="page-title">
+
+				<div class="container">
+					<h1>Portfolio Full Slider</h1>
+
+					<ul class="breadcrumb">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li class="active">Portfolio Full Slider</li>
+					</ul>
+				</div>
+			</header>
+
+			<section id="portfolio" class="container">
+
+				<h2><strong>Atropos</strong> project example</h2>
+
+				<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
+					<div>
+						<img class="img-responsive" src="assets/images/demo/portfolio/weather-app.jpg" alt="">
+					</div>
+					<div>
+						<iframe width="555" height="311" src="http://player.vimeo.com/video/25076865"></iframe>
+					</div>
+
+				</div>
+
+				<div class="divider"><!-- divider -->
+					<i class="fa fa-star"></i>
+				</div>
+
+				<small class="font300 fsize13 block project_quick_info">
+					<i class="fa fa-calendar styleSecondColor"></i> 29 June 2014
+					<span>&bull;</span>
+					Client: Atropos LLC
+				</small>
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet.
+				</p>
+
+
+				<div class="text-center">
+					<a href="#" class="btn btn-primary btn-lg btn-margin-top"><i class="fa fa-external-link"></i> Live Preview</a>
+				</div>
+
+
+				<hr />
+
+				<!-- RELATED -->
+				<h2><strong>Related</strong> Projects</h2>
+				<div class="row">
+
+					<div class="col-md-3"><!-- item 1 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover" href="portfolio-single.html">
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/scouter-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Project</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 2 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover lightbox" href="http://player.vimeo.com/video/25076865" data-plugin-options='{"type":"iframe"}'>
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>VIEW</strong> VIDEO
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/black-kitty-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Video</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 3 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover lightbox" href="assets/images/demo/portfolio/merchant2-600x403.jpg" data-plugin-options='{"type":"image"}'>
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/merchant2-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Image</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3"><!-- item 4 -->
+						<div class="item-box">
+							<figure>
+								<a class="item-hover" href="portfolio-single.html">
+									<span class="overlay color2"></span>
+									<span class="inner">
+										<span class="block fa fa-plus fsize20"></span>
+										<strong>PROJECT</strong> DETAIL
+									</span>
+								</a>
+								<img class="img-responsive" src="assets/images/demo/portfolio/flippin-the-bird1-600x403.jpg" width="260" height="260" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h4>Atropos Project</h4>
+								<small class="styleColor">29 June, 2014</small>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /RELATED -->
+
+
+			</section>
+
+		</div>

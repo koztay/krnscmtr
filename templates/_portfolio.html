@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles thumbnail %}
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
@@ -54,8 +54,8 @@
                                 {% endif %}
                                 {% if project.images.all.count > 0 %}
                                     {% load thumbnail %}
-                                    {% thumbnail project.images.first "100x100" crop="center" as im %}
-                                      <a href="{{ project.images.first.url }}">
+                                    {% thumbnail project.images.all.0.image "260x173" crop="center" as im %}
+                                      <a href="{{ project.images.all.0.image.url }}">
                                         <img class="img-responsive" src="{{ im.url }}">
                                       </a>
                                     {% endthumbnail %}
@@ -65,7 +65,7 @@
 
                             </figure>
                             <div class="item-box-desc">
-                                <h4>{{ project.title }}</h4>
+                                <a href="{{ project.get_absolute_url }}"><h4>{{ project.title }}</h4></a>
                                 <small class="styleColor">{{ project.finished_date }}</small>
                             </div>
                         </div>

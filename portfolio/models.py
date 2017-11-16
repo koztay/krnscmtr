@@ -34,6 +34,7 @@ class ProjectImage(models.Model):
     image = models.ImageField(upload_to="images/portfolio_images")
 
 
+# Bu model ne  işe yarıyor anlamadım? Boşu boşuna koymuşum.
 class PortfolioShortIntro(models.Model):
     intro_text = models.TextField()
 
