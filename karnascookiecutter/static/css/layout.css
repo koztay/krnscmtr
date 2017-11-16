@@ -96,7 +96,7 @@ body {
 /** 03. Top Nav
  **************************************************************** **/
 #header_shadow {
-	background:url('../images/header_shadow.png') no-repeat top center;
+	background:url('https://karnas.com.tr/static/images/header_shadow.png') no-repeat top center;
 	position:fixed;
 	top:81px; left:0; right:0;
 	height:75px;
@@ -1496,7 +1496,7 @@ footer .footer-bar .toTop:hover {
 	footer address .footer-sprite {
 		margin-bottom:20px;
 		padding-left:30px;
-		background:url('../images/footer_sprite.png') no-repeat 0 0;
+		background:url('https://karnas.com.tr/static/images/footer_sprite.png') no-repeat 0 0;
 	}
 		footer address .footer-sprite:last-child {
 			margin-bottom:0;
