@@ -49,3 +49,4 @@ django-compressor==2.1.1
 django-ckeditor==5.3.1
 # sorl-thumbnail  # v 12.3 bu çalışmıyor, gerzekler pip versiyonunu update etmemişler...
 -e git://github.com/jazzband/sorl-thumbnail.git#egg=sorl-thumbnail
+django-cleanup==0.4.2

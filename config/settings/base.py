@@ -48,6 +48,7 @@ DJANGO_APPS = [
     # Admin
     'django.contrib.admin',
 ]
+
 THIRD_PARTY_APPS = [
     'crispy_forms',  # Form layouts
     'allauth',  # registration
@@ -55,6 +56,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',  # registration
     # 'django_images',  # django-images plug-in
     'ckeditor',  # django-ckeditor
+    'django_cleanup',  # cleaning up for AWS files on image deletion...
     'sorl.thumbnail',
 ]
 
