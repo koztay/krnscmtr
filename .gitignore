@@ -78,3 +78,6 @@ cloud-config.yml
 create_coreos_droplet.sh
 
 compose/nginx/certs/
+
+# postgres backups
+postgres_backups
