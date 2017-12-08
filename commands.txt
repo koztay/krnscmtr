@@ -3,3 +3,19 @@ docker stop $(docker ps -a -q)
 
 # remove all dangling images
 docker rmi $(docker images --quiet --filter "dangling=true")
+
+# create docker-machine on linode:
+# Centos 'a geçmemizin sebebi CoreOS restart edince çöküyor herşey site yeniden başlamıyor.
+1-) Centos makina yarattım, sonra ssh-copy-id -i ~/.ssh/id_rsa core@172.104.228.55
+komutu verip centos 'ta passwordless login yaptım...
+
+2-) systemctl restart sshd.service ile restart ettim
+
+3-) sonra aşağıdaki komutu verdim oldu...
+docker-machine create \
+             --driver generic \
+             --generic-engine-port=2376 \
+             --generic-ip-address=139.162.141.212 \
+             --generic-ssh-user=root \
+             --generic-ssh-port=22 \
+             karnas
