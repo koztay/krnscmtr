@@ -6,10 +6,21 @@ docker rmi $(docker images --quiet --filter "dangling=true")
 
 # create docker-machine on linode:
 # Centos 'a geçmemizin sebebi CoreOS restart edince çöküyor herşey site yeniden başlamıyor.
-1-) Centos makina yarattım, sonra ssh-copy-id -i ~/.ssh/id_rsa core@172.104.228.55
-komutu verip centos 'ta passwordless login yaptım...
+1-) Centos makina yarattım, root için passwordless login setup yaptım
+not: bu aşamada "PasswordAuthentication no" yapma henüz, çünkü core user ekleyeceğiz.
+$ssh-copy-id root@172.104.228.55
 
-2-) systemctl restart sshd.service ile restart ettim
+2-) sonra bu makinada 'core' user 'ı' yarat :
+$useradd core  # add core user
+$passwd core  # set password for core user
+
+3-) sonra core user için passwordless login yap :
+$ssh-copy-id -i ~/.ssh/id_rsa core@172.104.228.55
+komutu verip centos 'ta passwordless login yap, şimdi "PasswordAuthentication no" yapabilirsin.
+
+
+4-) systemctl restart sshd.service
+ile restart et
 
 3-) sonra aşağıdaki komutu verdim oldu...
 docker-machine create \
