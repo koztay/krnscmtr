@@ -4,6 +4,7 @@ volumes:
   postgres_data: {}
   postgres_backup: {}
   static-data: {}
+  caddy: {}
 
 services:
   postgres:
@@ -15,7 +16,7 @@ services:
       - postgres_backup:/backups
     env_file: .env
 
-  django:
+  django: &django
     restart: always
     build:
       context: .
@@ -31,16 +32,29 @@ services:
     command: /gunicorn.sh
     env_file: .env
 
-  nginx:
-    restart: always
-    build: ./compose/nginx
-    container_name: nginx
+#  nginx:
+#    restart: always
+#    build: ./compose/nginx
+#    container_name: nginx
+#    depends_on:
+#      - django
+#    volumes:
+#      - static-data:/static_root
+#    volumes_from:
+#      - django
+#    ports:
+#      - "0.0.0.0:80:80"
+#      - "0.0.0.0:443:443"
+
+  caddy:
+    build:
+      context: .
+      dockerfile: ./compose/caddy/Dockerfile
     depends_on:
       - django
     volumes:
-      - static-data:/static_root
-    volumes_from:
-      - django
+      - caddy:/root/.caddy
+    env_file: .env
     ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443"
