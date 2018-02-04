@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 
 
 from .forms import ContactForm
@@ -44,3 +44,7 @@ class ContactView(FormView):
 
     def post(self, request, *args, **kwargs):
         return FormView.post(self, request, *args, **kwargs)
+
+
+class GoogleVerificationView(TemplateView):
+    template_name = 'google65e4332c98318fb0.html'

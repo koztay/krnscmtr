@@ -10,7 +10,7 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 
-from newsletter.views import ContactView
+from newsletter.views import ContactView, GoogleVerificationView
 from visual_site_elements.views import HomePageView
 
 
@@ -31,6 +31,8 @@ urlpatterns = [
     url(r'^projects/', include('portfolio.urls', namespace='projects')),
     # url(r'^pages/', include('django.contrib.flatpages.urls')),  # for flatpages urls
     url(r'^pages/hakkimizda/$', views.flatpage, {'url': '/hakkimizda/'}, name='hakkimizda'),
+    url(r'^google65e4332c98318fb0.html/$', GoogleVerificationView.as_view(), name='google_verification'),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
