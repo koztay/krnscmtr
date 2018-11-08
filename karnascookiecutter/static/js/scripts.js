@@ -1154,10 +1154,9 @@ function _toggle() {
 	function showMap(initWhat) {
 		var script 		= document.createElement('script');
 		script.type 	= 'text/javascript';
-		script.src 		= 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDyHd4S5cCAR9hlEIGn7DsVB6c1kE4BcT8&callback='+initWhat;
+		script.src 		= 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCEThlmTZNTgYGeWqhaMJLE3UKlc6VtMw4&callback='+initWhat;
 		document.body.appendChild(script);
 	}
-
 
 	// INIT CONTACT, NLY IF #contactMap EXISRS
 	if(jQuery("#gmap").length > 0) {
