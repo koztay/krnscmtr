@@ -4,7 +4,7 @@ services:
   - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=18.04.0-ce
+  - DOCKER_COMPOSE_VERSION=18.04.0
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -21,3 +21,6 @@ script:
 
 after_script:
   - docker-compose down
+
+
+curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
