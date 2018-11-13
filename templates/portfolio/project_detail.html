@@ -26,9 +26,10 @@
 				<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
                     {% if project.video_url %}
                     <div>
-						<iframe width="555" height="311" src="{{ project.video_url }}"></iframe>
+						<iframe width="555" height="311" src="{{ project.get_embed_url }}"></iframe>
 					</div>
                     {% endif %}
+
                     {% load thumbnail %}
                     {% for image in project.images.all %}
                     <div>

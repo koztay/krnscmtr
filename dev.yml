@@ -1,4 +1,4 @@
-version: '2'
+version: "2"
 
 volumes:
   postgres_data_dev: {}
@@ -23,15 +23,13 @@ services:
     environment:
       - POSTGRES_USER=karnascookiecutter
       - USE_DOCKER=yes
-      - DJANGO_ALLOWED_HOSTS=192.168.99.100,192.168.99.101
+      - DJANGO_ALLOWED_HOSTS=192.168.99.100,192.168.99.101,localhost
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     links:
       - postgres
-
-
 
   pycharm:
     build:
@@ -45,6 +43,3 @@ services:
       - .:/app
     links:
       - postgres
-
-
-
