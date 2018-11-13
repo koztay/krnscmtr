@@ -41,7 +41,10 @@ class ProjectImage(models.Model):
     order = models.PositiveIntegerField(default=0)
 
     class Meta:
-        ordering = ("order", )
+        ordering = ("order",)
+
+    def __str__(self):
+        return f'{self.project.title} image - {self.pk}'
 
 
 class PortfolioShortIntro(models.Model):
