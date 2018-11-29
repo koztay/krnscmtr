@@ -51,7 +51,7 @@
 					{{ project.title }}
 				</small>
 				<p class="lead">
-					{{ project.description }}
+					{{ project.description | linebreaksbr }}
 				</p>
 
                 {% comment %}
@@ -153,9 +153,7 @@
 
 {% endblock %}
 
-
-
-<div id="wrapper">
+{% comment %} <div id="wrapper"> {% endcomment %}
 
 			<!-- PAGE TITLE -->
 			<header id="page-title">
