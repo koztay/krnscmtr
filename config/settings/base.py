@@ -55,6 +55,7 @@ THIRD_PARTY_APPS = [
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     # 'django_images',  # django-images plug-in
+    'captcha',
     'ckeditor',  # django-ckeditor
     'django_cleanup',  # cleaning up for AWS files on image deletion...
     'sorl.thumbnail',
@@ -280,4 +281,3 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
-

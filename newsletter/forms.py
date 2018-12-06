@@ -1,4 +1,7 @@
+
+from captcha.fields import ReCaptchaField
 from django import forms
+
 from .models import SignUp
 
 
@@ -7,7 +10,7 @@ class ContactForm(forms.Form):
     full_name = forms.CharField(label='İsminiz', required=False,)
     email = forms.EmailField(label='E-Posta Adresiniz')
     message = forms.CharField(label='Mesajınız', widget=forms.Textarea)
-
+    captcha = ReCaptchaField()
 
 # class SignUpForm(forms.Form):
 #     email = forms.EmailField(label='')
@@ -50,4 +53,3 @@ class SignUpForm(forms.ModelForm):
         #     full_name = self.cleaned_data.get('full_name')
         #     # write validaton code here if necessary.
         #     return full_name
-

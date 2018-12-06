@@ -50,3 +50,7 @@ django-ckeditor==5.3.1
 # sorl-thumbnail  # v 12.3 bu çalışmıyor, gerzekler pip versiyonunu update etmemişler...
 -e git://github.com/jazzband/sorl-thumbnail.git#egg=sorl-thumbnail
 django-cleanup==0.4.2
+
+
+# https://github.com/praekelt/django-recaptcha
+django-recaptcha
