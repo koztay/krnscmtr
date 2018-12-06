@@ -220,3 +220,4 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 # recaptcha settings
 RECAPTCHA_PUBLIC_KEY = env.str("RECAPTCHA_PUBLIC_KEY")
 RECAPTCHA_PRIVATE_KEY = env.str("RECAPTCHA_PRIVATE_KEY")
+NOCAPTCHA = True  # v2 enable etmek için
