@@ -32,21 +32,22 @@ services:
     command: /gunicorn.sh
     env_file: .env
 
-#  nginx:
-#    restart: always
-#    build: ./compose/nginx
-#    container_name: nginx
-#    depends_on:
-#      - django
-#    volumes:
-#      - static-data:/static_root
-#    volumes_from:
-#      - django
-#    ports:
-#      - "0.0.0.0:80:80"
-#      - "0.0.0.0:443:443"
+  #  nginx:
+  #    restart: always
+  #    build: ./compose/nginx
+  #    container_name: nginx
+  #    depends_on:
+  #      - django
+  #    volumes:
+  #      - static-data:/static_root
+  #    volumes_from:
+  #      - django
+  #    ports:
+  #      - "0.0.0.0:80:80"
+  #      - "0.0.0.0:443:443"
 
   caddy:
+    restart: always
     build:
       context: .
       dockerfile: ./compose/caddy/Dockerfile
@@ -56,11 +57,10 @@ services:
       - caddy:/root/.caddy
     env_file: .env
     ports:
-      - "0.0.0.0:80:80"
-      - "0.0.0.0:443:443"
+      - '0.0.0.0:80:80'
+      - '0.0.0.0:443:443'
 
   redis:
     restart: always
     image: redis:latest
     container_name: redis
-
