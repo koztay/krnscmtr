@@ -11,9 +11,10 @@ gunicorn==19.6.0
 
 # Static and Media Storage
 # ------------------------------------------------
-boto==2.46.1
-django-storages-redux==1.3.2
-
+# boto==2.46.1
+# django-storages-redux==1.3.2
+django-storages[boto3]==1.7.1  # https://github.com/jschneier/django-storages
+Collectfast==0.6.2  # https://github.com/antonagestam/collectfast
 
 # Email backends for Mailgun, Postmark, SendGrid and more
 # -------------------------------------------------------
