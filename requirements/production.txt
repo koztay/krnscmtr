@@ -18,7 +18,7 @@ Collectfast==0.6.2  # https://github.com/antonagestam/collectfast
 
 # Email backends for Mailgun, Postmark, SendGrid and more
 # -------------------------------------------------------
-django-anymail==0.8
+django-anymail==1.2.1
 
 
 
