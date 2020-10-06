@@ -73,6 +73,7 @@ services:
       - main
 
   traefik:
+    restart: always
     build:
       context: .
       dockerfile: ./compose/traefik/Dockerfile
